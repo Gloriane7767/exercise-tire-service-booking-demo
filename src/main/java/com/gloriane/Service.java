@@ -2,9 +2,9 @@ package com.gloriane;
 
 public abstract class Service {
 
-    protected int id;
-    protected String name;
-    protected double basePrice;
+    private int id;
+    private String name;
+    private double basePrice;
 
     public Service(int id, String name, double basePrice) {
         this.id = id;
@@ -23,3 +23,4 @@ public abstract class Service {
     public double getBasePrice() {
         return basePrice;
     }
+}
