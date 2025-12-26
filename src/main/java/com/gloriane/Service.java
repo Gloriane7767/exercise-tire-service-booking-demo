@@ -28,6 +28,16 @@ public abstract class Service {
     }
 
     public String getDescription() {
-        return "ID: " + id + "Name: " + "Base Price: $" + basePrice;
+        return "Id: " + id + ", Name: " + name + ", Base Price: $" + basePrice;
+    }
+
+    // Default calculation: subclasses may override with specific pricing logic
+    public double calculatePrice() {
+        return basePrice;
+    }
+
+    // Default duration in minutes: subclasses may override
+    public int getDurationInMinutes() {
+        return 0;
     }
 }
