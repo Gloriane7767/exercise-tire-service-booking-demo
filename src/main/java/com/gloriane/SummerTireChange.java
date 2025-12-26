@@ -2,21 +2,14 @@ package com.gloriane;
 
 public class SummerTireChange extends Service {
     // Summer tire change is faster
-    private static final int DURATION = 30;
+    private int duration;
 
-    public SummerTireChange(int id) {
-        super(id, "Summer Tire Change", 60.0);
+    public SummerTireChange(int id, String name, double basePrice, int duration) {
+        super(id, name, basePrice);
+        this.duration = duration;
     }
 
-    // No extra cost
-    @Override
-    public double calculatePrice() {
-        return getBasePrice();
-    }
-
-    @Override
-    public int getDurationInMinutes() {
-        return DURATION;
+    public int getDuration() {
+        return duration;
     }
 }
-

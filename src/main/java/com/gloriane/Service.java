@@ -27,9 +27,7 @@ public abstract class Service {
         return basePrice;
     }
 
-    // Every service MUST tell its price
-    public abstract double calculatePrice();
-
-    // Every service MUST tell how long it takes
-    public abstract int getDurationInMinutes();
+    public String getDescription() {
+        return "ID: " + id + "Name: " + "Base Price: $" + basePrice;
+    }
 }

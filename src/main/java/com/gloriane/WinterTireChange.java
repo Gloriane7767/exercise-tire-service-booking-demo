@@ -2,19 +2,11 @@ package com.gloriane;
 
 // Winter tire change takes longer
 public class WinterTireChange extends Service {
-    private static final  int DURATION = 45;
+    private int duration;
 
-    public WinterTireChange(int id) {
-        super(id, "Winter Tire Change", 80.0);
+    public WinterTireChange(int id, String name, double basePrice, int duration) {
+        super(id, name, basePrice);
+        this.duration = duration;
     }
 
-    @Override
-    public double calculatePrice() {
-        return getBasePrice() * 1.20;
-    }
-
-    @Override
-    public int getDurationInMinutes() {
-        return DURATION;
-    }
 }
