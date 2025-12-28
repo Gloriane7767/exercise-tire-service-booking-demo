@@ -1,5 +1,6 @@
 package com.gloriane;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -7,6 +8,8 @@ public class Main {
         Service summerService = new SummerTireChange(1, "Summer Tire Change", 100.0, 70.0, 30,20.0);
         Service winterService = new WinterTireChange(2, "Winter Tire Change", 120.0, 80.0, 45,60.0);
 
+        List<Service> services = new ArrayList<>() {
+        };
 
         System.out.println("Id: " + summerService.getId() + " " + summerService.getName() + ": $" + summerService.calculatePrice() +
                 ", Duration: " + summerService.getDurationInMinutes() + " mins");

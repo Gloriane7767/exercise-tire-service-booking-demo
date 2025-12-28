@@ -1,7 +1,5 @@
 package com.gloriane;
 
-import java.util.List;
-
 public class SummerTireChange extends Service {
     // Summer tire change is faster
     private final double price;
