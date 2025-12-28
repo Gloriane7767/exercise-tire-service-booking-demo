@@ -4,16 +4,18 @@ package com.gloriane;
 public class WinterTireChange extends Service {
     private final double price;
     private final int duration;
+    private final double storageFee;
 
-    public WinterTireChange(int id, String name, double basePrice, double price, int duration) {
+    public WinterTireChange(int id, String name, double basePrice, double price, int duration, double storageFee) {
         super(id, name, basePrice);
         this.price = price;
         this.duration = duration;
+        this.storageFee = storageFee;
     }
 
     @Override
     public double calculatePrice() {
-        return price;
+        return price + 60; // Add storage fee for winter tires
     }
 
     @Override
@@ -22,7 +24,7 @@ public class WinterTireChange extends Service {
     }
 
     @Override
-    public String getDescription() {
-        return super.getDescription();
+    public void getDescription() {
+        return;
     }
 }
