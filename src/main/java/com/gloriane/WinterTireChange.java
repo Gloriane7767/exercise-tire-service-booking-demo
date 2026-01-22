@@ -18,4 +18,11 @@ public class WinterTireChange extends Service {
     }
 }
 
-
+/*
+extends Service means:
+“WinterTireChange IS A Service”
+Inherits:
+id
+name
+basePrice
+ */
